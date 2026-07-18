@@ -170,7 +170,7 @@ h1,h2,h3,h4,p{ margin:0; overflow-wrap:break-word; }
   gap:10px;
   flex-shrink:0;
 }
-.brand-mark{ width:42px; height:34px; }
+.brand-mark{ width:42px; height:42px; }
 .brand-text{ display:flex; flex-direction:column; line-height:1.5; }
 .brand-text strong{ font-size:16px; font-weight:800; color:var(--text); }
 .brand-text small{ font-size:11px; color:var(--text-muted); }
@@ -526,6 +526,10 @@ h1,h2,h3,h4,p{ margin:0; overflow-wrap:break-word; }
 }
 .carousel-arrow:hover{ background:var(--dark); color:#fff; transform:scale(1.05); }
 
+.carousel-arrow > svg{
+  rotate: 180deg;
+}
+
 .properties-cta{ display:flex; justify-content:center; margin-top:36px; }
 
 .carousel-progress{
@@ -740,7 +744,15 @@ h1,h2,h3,h4,p{ margin:0; overflow-wrap:break-word; }
   transform:translate(-50%,-100%);
   filter:drop-shadow(0 4px 6px rgba(0,0,0,.3));
 }
-.map-btn{ position:absolute; bottom:12px; left:50%; transform:translateX(-50%); width:calc(100% - 24px); }
+.map-btn{
+  position:absolute;
+  bottom:12px;
+  left:5%;
+  /* left:50%; */
+  /* transform:translateX(-50%); */
+  /* width:75%; */
+  width:calc(100% - 24px);
+}
 
 .footer-contact{ display:flex; flex-direction:column; gap:14px; font-size:13.5px; }
 .contact-line{ display:flex; align-items:center; gap:10px; color:#c9cad0; transition:color .2s ease; }
@@ -753,18 +765,22 @@ h1,h2,h3,h4,p{ margin:0; overflow-wrap:break-word; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:22px 0;
+  padding:22px 3rem;
   font-size:12.5px;
   color:#83848c;
 }
 .footer-bottom span{ color:#d9534f; }
+
+.footer-bottom > p > a {
+  color: var(--gold);
+}
 
 /* =========================================================
    SCROLL TOP
    ========================================================= */
 .scroll-top{
   position:fixed;
-  bottom:26px;
+  bottom:50px;
   left:26px;
   width:46px; height:46px;
   border-radius:50%;
