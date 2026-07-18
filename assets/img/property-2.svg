@@ -1,0 +1,49 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" role="img">
+<defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#242a45"/>
+      <stop offset="55%" stop-color="#3a3f60"/>
+      <stop offset="100%" stop-color="#d9b06a"/>
+    </linearGradient>
+    <linearGradient id="wallLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#efe9db"/>
+      <stop offset="100%" stop-color="#d8d1c0"/>
+    </linearGradient>
+    <linearGradient id="wallDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#32363f"/>
+      <stop offset="100%" stop-color="#1d2027"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffe6a8"/>
+      <stop offset="100%" stop-color="#f3b95e"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#363b2c"/>
+      <stop offset="100%" stop-color="#20241a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f3c477" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#f3c477" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.045 0"/>
+    </filter>
+  </defs>
+<rect width="400" height="300" fill="url(#sky)"/>
+<circle cx="311" cy="59" r="22" fill="#f6d999" opacity="0.9"/>
+<g opacity="0.55" fill="#141712"><ellipse cx="25" cy="230" rx="36.0" ry="54.0"/><ellipse cx="61.0" cy="242.6" rx="25.2" ry="37.800000000000004"/></g>
+<rect y="210" width="400" height="90" fill="url(#ground)"/>
+<rect x="47" y="108" width="229" height="70" fill="url(#wallLight)"/>
+<rect x="47" y="108" width="229" height="5" fill="#c9a25c"/>
+<rect x="61.0" y="126.0" width="60.3" height="38.0" fill="url(#win)"/>
+<rect x="131.3" y="126.0" width="60.3" height="38.0" fill="#232733"/>
+<rect x="201.7" y="126.0" width="60.3" height="38.0" fill="#232733"/>
+<rect x="30" y="178" width="340" height="102" fill="url(#wallDark)"/>
+<rect x="30" y="178" width="340" height="4" fill="#caa15c" opacity="0.9"/>
+<rect x="46.0" y="196.0" width="68.0" height="70.0" fill="url(#win)"/>
+<rect x="126.0" y="196.0" width="68.0" height="70.0" fill="url(#win)"/>
+<rect x="206.0" y="196.0" width="68.0" height="70.0" fill="url(#win)"/>
+<rect x="286.0" y="196.0" width="68.0" height="70.0" fill="url(#win)"/>
+<rect x="47" y="104" width="229" height="4" fill="#c9a25c"/>
+</svg>
