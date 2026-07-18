@@ -381,7 +381,7 @@
      Footer year
   --------------------------------------------------- */
   var yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear() - 621);
 
   /* ---------------------------------------------------
      Favorite (heart) buttons — local UI state only
