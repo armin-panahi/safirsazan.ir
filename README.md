@@ -133,6 +133,7 @@ SafirSazan/
 # 🌍 وضعیت پروژه
 
 > ✅ این پروژه تکمیل شده و در حال حاضر روی هاست مشتری به صورت آنلاین در حال استفاده است.
+
 > مشاهده پروژه : http://safirsazan.ir/
 
 ---
@@ -142,10 +143,10 @@ SafirSazan/
 <div align="center">
 
 ### Armin Panahi
-Computer Engineer • Web Developer
+<p>Computer Engineer • Web Developer</p>
 
 ### Amirreza Arezoumand
-SEO Specialist • Web Developer
+<p>SEO Specialist • Web Developer</p>
 
 </div>
 
@@ -163,6 +164,6 @@ SEO Specialist • Web Developer
 
 ### ⭐ اگر این پروژه را دوست داشتید، به مخزن ستاره بدهید.
 
-ساخته شده با ❤️ توسط **آرمین پناهی** , **امیررضا آرزومند**
+ساخته شده با ❤️ توسط **آرمین پناهی** و **امیررضا آرزومند**
 
 </div>
