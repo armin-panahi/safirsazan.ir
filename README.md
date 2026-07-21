@@ -60,7 +60,7 @@
 
 <p align="center">
 
-<img src="https://skillicons.dev/icons?i=html,css,js,vscode,git,github" />
+<img src="https://skillicons.dev/icons?i=html,css,js,vscode,webstorm,git,github,docker" />
 
 </p>
 
