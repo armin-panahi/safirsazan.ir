@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.idealhome.ir/sitemap.xml
+Sitemap: https://www.safirsazan.ir/sitemap.xml

@@ -70,7 +70,9 @@
         if (sec.offsetTop <= scrollPos) current = sec;
       });
       navLinks.forEach(function (link) {
-        var match = link.getAttribute('href') === '#' + current.id;
+        var href = link.getAttribute('href') || '';
+        if (href.charAt(0) !== '#') return; /* cross-page link: leave server-rendered active state as-is */
+        var match = href === '#' + current.id;
         link.classList.toggle('active', match);
       });
     }
@@ -90,12 +92,42 @@
   /* ---------------------------------------------------
      Search form (front-end only demo)
   --------------------------------------------------- */
+  /* ---------------------------------------------------
+     Search form — redirects to the full listings page
+     with matching filter query params pre-applied.
+  --------------------------------------------------- */
   var searchForm = document.getElementById('searchForm');
   if (searchForm) {
     searchForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      var target = document.getElementById('properties');
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      var data = new FormData(searchForm);
+      var params = new URLSearchParams();
+
+      var hood = data.get('location');
+      if (hood) params.set('hood', hood);
+
+      var deal = data.get('deal');
+      if (deal) params.set('deal', deal);
+
+      var type = data.get('type');
+      if (type) params.set('type', type);
+
+      var area = data.get('area');
+      if (area) {
+        var areaParts = area.split('-');
+        if (areaParts[0]) params.set('amin', areaParts[0]);
+        if (areaParts[1]) params.set('amax', areaParts[1]);
+      }
+
+      var price = data.get('price');
+      if (price && deal !== 'rent') {
+        var priceParts = price.split('-');
+        if (priceParts[0]) params.set('pmin', priceParts[0]);
+        if (priceParts[1]) params.set('pmax', priceParts[1]);
+      }
+
+      var qs = params.toString();
+      window.location.href = 'listings.html' + (qs ? '?' + qs : '');
     });
   }
 
@@ -179,14 +211,14 @@
   --------------------------------------------------- */
   var testimonials = [
     {
-      text: 'از مشاوره حرفه‌ای و پیگیری دقیق تیم خانه ایده‌آل بسیار راضی هستم. در کوتاه‌ترین زمان، ملک مورد نظرم را پیدا کردم. پیشنهاد می‌کنم.',
+      text: 'از مشاوره حرفه‌ای و پیگیری دقیق تیم سفیرسازان بسیار راضی هستم. در کوتاه‌ترین زمان، ملک مورد نظرم را پیدا کردم. پیشنهاد می‌کنم.',
       name: 'محمد رضایی',
       role: 'خریدار ملک',
       initial: 'م',
       color: '#caa15c'
     },
     {
-      text: 'فروش ملکم را به تیم خانه ایده‌آل سپردم و در کمتر از دو هفته با قیمت عالی معامله انجام شد. کاملاً شفاف و حرفه‌ای بودند.',
+      text: 'فروش ملکم را به تیم سفیرسازان سپردم و در کمتر از دو هفته با قیمت عالی معامله انجام شد. کاملاً شفاف و حرفه‌ای بودند.',
       name: 'سارا احمدی',
       role: 'فروشنده ملک',
       initial: 'س',
@@ -381,7 +413,7 @@
      Footer year
   --------------------------------------------------- */
   var yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = String(new Date().getFullYear() - 621);
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
   /* ---------------------------------------------------
      Favorite (heart) buttons — local UI state only
