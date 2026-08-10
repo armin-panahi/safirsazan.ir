@@ -807,7 +807,7 @@ h1,h2,h3,h4,p{ margin:0; overflow-wrap:break-word; }
 }
 
 @media (max-width:992px){
-  .hero-media { display: none; }
+  .hero-media , .hero-media > * { display: none; }
   .main-nav{ display:none; }
   .hamburger{ display:flex; width:44px; height:44px; }
 
