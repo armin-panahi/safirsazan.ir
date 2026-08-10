@@ -743,7 +743,13 @@ h1,h2,h3,h4,p{ margin:0; overflow-wrap:break-word; }
   transform:translate(-50%,-100%);
   filter:drop-shadow(0 4px 6px rgba(0,0,0,.3));
 }
-.map-btn{ position:absolute; bottom:12px; left:50%; transform:translateX(-50%); width:calc(100% - 24px); }
+.map-btn{
+  position:absolute;
+  bottom:12px;
+  left:12px;
+  /* transform:translateX(-50%); */
+  width:calc(100% - 24px);
+}
 
 .footer-contact{ display:flex; flex-direction:column; gap:14px; font-size:13.5px; }
 .contact-line{ display:flex; align-items:center; gap:10px; color:#c9cad0; transition:color .2s ease; }
@@ -756,7 +762,7 @@ h1,h2,h3,h4,p{ margin:0; overflow-wrap:break-word; }
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:22px 0;
+  padding:22px 100px;
   font-size:12.5px;
   color:#83848c;
 }
@@ -849,6 +855,12 @@ h1,h2,h3,h4,p{ margin:0; overflow-wrap:break-word; }
   .process-steps{ grid-template-columns:repeat(2,1fr); row-gap:32px; column-gap:16px; }
   .process-steps::before{ display:none; }
   .footer-grid{ grid-template-columns:1fr 1fr; }
+  .footer-bottom {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+  }
 }
 
 /* ---------- Large phones / small tablets ---------- */
