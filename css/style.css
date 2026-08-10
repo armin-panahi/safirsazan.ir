@@ -457,6 +457,9 @@ h1,h2,h3,h4,p{ margin:0; overflow-wrap:break-word; }
   align-items:center;
   gap:14px;
 }
+
+.carousel-arrow > svg { rotate: 180deg; }
+
 .carousel-track{
   display:grid;
   grid-auto-flow:column;
