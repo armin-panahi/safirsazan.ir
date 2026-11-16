@@ -1,6 +1,6 @@
 <div align="center">
-
-<<<<<<< HEAD
+   
+<<<<<<< HEAD  
 # 🏡 سفیرسازان | Safirsazan
 
 **قالب صفحه فرود برای مشاوران و آژانس‌های املاک — HTML/CSS/JS خالص، بدون فریم‌ورک**
@@ -15,7 +15,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#-contributing)
 
 [دمو زنده](#) · [گزارش باگ](../../issues) · [درخواست ویژگی](../../issues)
-
+ 
 </div>
 
 <br>
